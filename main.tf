@@ -380,3 +380,40 @@ resource "aws_instance" "DB-VM" {
     Name = "DB-VM"
   }
 }
+
+resource "aws_instance" "test-VM" {
+  ami                    = data.aws_ami.ubuntu.id
+  instance_type          = "t3.micro"
+  subnet_id              = aws_subnet.Web-Public-A.id
+  vpc_security_group_ids = [aws_security_group.web-SG.id]
+  key_name               = var.key_name
+
+  tags = {
+    Name = "test-VM"
+  }
+}
+
+resource "aws_instance" "stanley-question-server" {
+  ami                    = "ami-0ec10929233384c7f"
+  instance_type          = "t3.micro"
+  subnet_id              = aws_subnet.App-Private-A.id
+  vpc_security_group_ids = [aws_security_group.App-SG.id]
+  key_name               = var.key_name
+
+  tags = {
+    Name = "stanley-question-server"
+  }
+}
+
+
+resource "aws_instance" "jt-server" {
+  ami                    = "ami-0ec10929233384c7f"
+  instance_type          = "t3.micro"
+  subnet_id              = aws_subnet.App-Private-A.id
+  vpc_security_group_ids = [aws_security_group.App-SG.id]
+  key_name               = var.key_name
+
+  tags = {
+    Name = "stanley-question-server"
+  }
+}
