@@ -1,6 +1,6 @@
 # Terraform Three-Tier Architecture on AWS
 
-A production-ready three-tier architecture on AWS using Terraform for infrastructure as code.
+A production-ready three-tier architecture on AWS using Terraform for infrastructure as code. This infrastructure will be modified as need be.
 
 ## Architecture Overview
 
