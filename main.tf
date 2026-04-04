@@ -8,7 +8,9 @@ resource "aws_vpc" "ThreeTier-VPC" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "ThreeTier-VPC"
+    Name  = "ThreeTier-VPC"
+    Env   = "Prod"
+    Owner = "Eunice"
   }
 }
 

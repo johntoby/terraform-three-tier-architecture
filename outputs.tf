@@ -15,4 +15,3 @@ output "App-VM_ip" {
 output "DB-VM_ip" {
   value = aws_instance.DB-VM.private_ip
 }
-
